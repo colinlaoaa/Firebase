@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.activity_login1.*
 
 class LoginActivity : AppCompatActivity() {
 
-
+    var auth = FirebaseAuth.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,11 +23,16 @@ class LoginActivity : AppCompatActivity() {
         init()
     }
 
+    override fun onResume() {
+        super.onResume()
+        if(auth.currentUser!= null){var myIntent=Intent(applicationContext, MainActivity::class.java)
+            startActivity(myIntent)}
+    }
+
     private fun init() {
         button_register.visibility = View.GONE
         button_forget_password.visibility = View.GONE
         text_view_2.visibility = View.GONE
-        var auth = FirebaseAuth.getInstance()
         if(auth.currentUser!= null){var myIntent=Intent(applicationContext, MainActivity::class.java)
             startActivity(myIntent)}
 
