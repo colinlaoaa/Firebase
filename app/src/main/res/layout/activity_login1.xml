@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/app_bar" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar">
+
+        <ImageView
+            android:id="@+id/joy"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:padding="5dp"
+            android:scaleType="fitXY" />
+
+
+        <LinearLayout
+            android:id="@+id/login_edit_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/joy"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="40dp"
+
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/linear_3"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginRight="20dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="20">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="5"
+                    android:text="Email"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+
+
+                <EditText
+                    android:id="@+id/edit_text_email"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="15"
+                    android:background="@drawable/edittext_selector"
+                    android:hint="USER EMAIL"
+                    android:minHeight="40dp"
+                    android:paddingLeft="30dp"
+                    android:singleLine="true"
+                    android:textColorHint="#95A1AA" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linear_2"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Password"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+
+                <EditText
+                    android:id="@+id/edit_text_password"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_selector"
+                    android:hint="PASSWORD"
+                    android:inputType="textPassword"
+                    android:minHeight="40dp"
+                    android:paddingLeft="30dp"
+                    android:singleLine="true"
+                    android:textColorHint="#95A1AA" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="30dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/text_view_forget_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:paddingLeft="0dp"
+                    android:text="forget password"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/text_view_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal"
+                        android:text="Go to Register"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/text_view_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal"
+                        android:text="Go to Login"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/login_edit_layout"
+            android:layout_marginLeft="85dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="70dp"
+            android:background="@drawable/button_selector"
+            android:gravity="center"
+            android:text="LOGIN"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/button_register"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/login_edit_layout"
+            android:layout_marginLeft="85dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="70dp"
+            android:background="@drawable/button_selector"
+            android:gravity="center"
+            android:text="Register"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/button_forget_password"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/login_edit_layout"
+            android:layout_marginLeft="85dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="70dp"
+            android:background="@drawable/button_selector"
+            android:gravity="center"
+            android:text="RESET"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="22sp" />
+
+    </RelativeLayout>
+</RelativeLayout>
+
+
+
+
